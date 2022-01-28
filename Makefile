@@ -9,10 +9,13 @@ run-dev-manual:
 
 # with docker-compose
 run-dev:
-	docker-compose up
+	docker-compose -f docker-compose-dev up
 
 run-dev-test:
-	docker-compose up --build
+	docker-compose -f docker-compose-dev up --build
+
+down:
+	docker-compose -f docker-compose-dev down
 
 # ------------------- production -------------------
 build-prod:
